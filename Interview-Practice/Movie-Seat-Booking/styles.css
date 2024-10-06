@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body {
+  font-family: sans-serif;
+  font-family: 'Roboto Condensed', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: bold;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: bisque;
+}
+
+.movie-dropdown select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Condensed', system-ui;
+}
+
+.legend ul {
+  display: flex;
+  gap: 10px;
+}
+
+.column {
+  display: flex;
+  gap: 4px;
+}
+
+.column:first-of-type {
+  margin-left: 30px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.seat {
+  width: 20px;
+  height: 20px;
+  border: 2px solid pink;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.seat:not(& .legend):not(.occupied):not(.selected):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.occupied {
+  background-color: cyan;
+}
+.selected {
+  background-color: turquoise;
+}
+
+#screen {
+  height: 20px;
+  width: 80%;
+  background-color: grey;
+  margin-bottom: 20px;
+}
