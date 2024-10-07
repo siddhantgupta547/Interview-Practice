@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   background-color: bisque;
 }
@@ -36,10 +37,6 @@ body {
   gap: 4px;
 }
 
-.column:first-of-type {
-  margin-left: 30px;
-}
-
 .row {
   display: flex;
   flex-direction: column;
@@ -54,13 +51,13 @@ body {
   border-top-right-radius: 8px;
 }
 
-.seat:not(& .legend):not(.occupied):not(.selected):hover {
+.seat:not(.legend .seat):not(.occupied):hover {
   cursor: pointer;
   transform: scale(1.2);
 }
 
 .occupied {
-  background-color: cyan;
+  background-color: rgb(19, 234, 234);
 }
 .selected {
   background-color: turquoise;
@@ -71,4 +68,9 @@ body {
   width: 80%;
   background-color: grey;
   margin-bottom: 20px;
+}
+
+#row-container {
+  display: flex;
+  gap: 2rem;
 }
